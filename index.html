@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
     <title>Html Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
 </head>
-<body>
+<body class="bg-sky-100">
+    <header>
+        <div class="fixed top-0 right-0">
+            <img src="./images/header-bg-color.png" class="w-full">
+        </div>
+        <nav class="flex w-full items-center justify-between z-50 fixed container">
+            <div>
+                <img src="./images/developer.png" class="w-14 h-18 m-6 cursor-pointer"/>
+            </div>
+
+            <div>
+                <ul class="list-none md:flex items-center gap-8 lg:gap-12  px-12 py-3 rounded-full">
+                    <li>Home</li>
+                    <li>Project</li>
+                    <li>About me</li>
+                    <li>Contact</li>
+                </ul>
+
+                
+            </div>
+            <div class="justify-center px-16">
+            <button><img src="./images/moon_icon.png" class="w-6"></button>
+        </div>
+        </nav>
+    </header>
     
 </body>
 </html>
