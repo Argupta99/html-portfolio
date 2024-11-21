@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
 </head>
-<body class="bg-sky-100">
+<body class="overflow-x-hidden">
     <header>
         <div class="fixed top-0 right-0">
             <img src="./images/header-bg-color.png" class="w-full">
@@ -18,7 +18,7 @@
             </div>
 
             <div>
-                <ul class="list-none md:flex items-center gap-8 lg:gap-12  px-12 py-3 rounded-full">
+                <ul class="list-none md:flex items-center gap-8 lg:gap-12  px-12 py-3 rounded-full hidden bg-white shadow-sm bg-opacity-50">
                     <li>Home</li>
                     <li>Project</li>
                     <li>About me</li>
@@ -27,9 +27,21 @@
 
                 
             </div>
-            <div class="justify-center px-16">
+            <div class="justify-center px-16 flex gap-3">
             <button><img src="./images/moon_icon.png" class="w-6"></button>
+            <button class="block md:hidden ml-3"><img src="./images/menu-black.png" class="w-6"></button>
         </div>
+
+        <!--mobile responsiveness-->
+        <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-20 fixed -right-64 top-0 bottom-0 h-screen transition duration-500 bg-rose-50 gap-4">
+            <div class="right-6 top-6 absolute">
+                <img src="/images/close-black.png" class="w-5">
+            </div>
+            <li>Home</li>
+            <li>Project</li>
+            <li>About me</li>
+            <li>Contact</li> 
+        </ul>
         </nav>
     </header>
     
