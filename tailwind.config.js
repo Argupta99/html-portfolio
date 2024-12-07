@@ -11,6 +11,10 @@ tailwind.config = {
 
           animation : {
             spin_slow: 'spin 6s linear infinite'
+          },
+
+          colors: {
+            darkTheme : '#11001F'
           }
     }
 }
