@@ -51,9 +51,10 @@
         </div>
 
         <!--mobile responsiveness-->
-        <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-20 fixed -right-64 top-0 bottom-0 h-screen transition duration-500 bg-rose-50 gap-4">
+        <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-20 fixed -right-64 top-0 bottom-0 h-screen transition duration-500 bg-rose-50 gap-4 dark:bg-[#2a004a] dark:text-white">
             <div class="right-6 top-6 absolute font-Ovo" onclick="closeMenu()">
-                <img src="/images/close-black.png" class="w-5 cursor-pointer">
+                <img src="/images/close-black.png" class="w-5 cursor-pointer dark:hidden">
+                <img src="/images/close-white.png" class="w-5 cursor-pointer hidden dark:block">
             </div>
             <li><a href="#home" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About</a></li>
