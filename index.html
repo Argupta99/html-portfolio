@@ -13,10 +13,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
 </head>
-<body class="overflow-x-hidden bg-gradient-to-r from-pink-200 via-pink-400 to-pink-200 font-Outfit leading-6 dark:bg-darkTheme dark:text-white">
+<body class="overflow-x-hidden from-pink-200 via-pink-400 to-pink-200  bg-gradient-to-r font-Outfit leading-6 dark:bg-darkThemeBg dark:text-white">
 
     <!--<div class="w-full h-screen bg-no-repeat"
     style="background-image: url(/images/header-bg-color.png);"></div>-->
+    
 
     <header">
         
@@ -37,7 +38,10 @@
                 
             </div>
             <div class="justify-center px-16 flex gap-3">
-            <button><img src="./images/moon_icon.png" class="w-6"></button>
+                <button id="themeToggle"" aria-label="Toggle dark/light mode">
+                    <img src="./images/moon_icon.png" class="w-6" alt="Toggle Theme">
+                </button>
+                
             <button class="block md:hidden ml-3" onclick="openMenu()"><img src="./images/menu-black.png" class="w-6"></button>
         </div>
 
@@ -322,6 +326,7 @@
     </div>
     
 </div>
+
 
 <script src="/main.js"></script>
        
