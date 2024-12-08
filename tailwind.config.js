@@ -1,5 +1,7 @@
 tailwind.config = {
+  darkMode: 'class',
     theme: {
+      extend: {
           gridTemplateColumns: {
             'webApp' : 'repeat(auto-fit, minmax(200px, 1fr))'
           }, 
@@ -14,7 +16,12 @@ tailwind.config = {
           },
 
           colors: {
-            darkTheme : '#11001F'
-          }
+            darkThemeBg : '#11001F'
+            
     }
+  }
+},
+
+   // darkMode : 'selector'//
+   plugins: [],
 }
