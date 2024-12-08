@@ -1,20 +1,40 @@
-//-------------light mode and dark mode-------//
-if (localStorage.theme === 'dark' || (! ('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
-{
-    document.documentElement.classList.add('dark')
-}else
-{
-    document.documentElement.classList.remove('dark')
-}
 
 
-  function toggleTheme () {
-if (document.documentElement.classList.contains('dark')) 
-{
-    localStorage.theme = 'dark';
-}
+  // Select elements
+const themeToggle = document.getElementById('themeToggle');
+const rootElement = document.documentElement;
 
-else {
-    localStorage.theme = 'light';
-}
+// Check and apply saved theme from localStorage
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    enableDarkMode();
+  } else {
+    enableLightMode();
   }
+});
+
+// Function to enable light mode
+function enableLightMode() {
+  rootElement.classList.remove('dark');
+  rootElement.classList.add('light');
+  document.body.style.background = 'linear-gradient(to right, #fbcfe8, #f472b6, #fbcfe8)';
+  localStorage.setItem('theme', 'light');
+}
+
+// Function to enable dark mode
+function enableDarkMode() {
+  rootElement.classList.remove('light');
+  rootElement.classList.add('dark');
+  document.body.style.background = '#11001F';
+  localStorage.setItem('theme', 'dark');
+}
+
+// Toggle between themes
+themeToggle.addEventListener('click', () => {
+  if (rootElement.classList.contains('dark')) {
+    enableLightMode();
+  } else {
+    enableDarkMode();
+  }
+});
+
